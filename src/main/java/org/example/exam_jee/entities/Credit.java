@@ -1,10 +1,12 @@
 package org.example.exam_jee.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.util.List;
 
-@Entity
+@Entity @Data
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "TYPE_CREDIT")
 public abstract class Credit {
