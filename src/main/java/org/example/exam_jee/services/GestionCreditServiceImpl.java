@@ -8,6 +8,7 @@ import org.example.exam_jee.repositories.*;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 import java.util.stream.Collectors;
 
     @Service
@@ -22,7 +23,6 @@ import java.util.stream.Collectors;
         private final RemboursementRepository remboursementRepository;
 
         private final ClientMapper clientMapper;
-        private final CreditMapper creditMapper;
         private final CreditPersonnelMapper creditPersonnelMapper;
         private final CreditImmobilierMapper creditImmobilierMapper;
         private final CreditProfessionnelMapper creditProfessionnelMapper;
@@ -61,19 +61,8 @@ import java.util.stream.Collectors;
             clientRepository.deleteById(id);
         }
 
-        @Override
-        public CreditDTO getCreditById(Long id) {
-            return creditRepository.findById(id)
-                    .map(creditMapper::toDTO)
-                    .orElseThrow(() -> new RuntimeException("Credit not found"));
-        }
 
-        @Override
-        public List<CreditDTO> getAllCredits() {
-            return creditRepository.findAll().stream()
-                    .map(creditMapper::toDTO)
-                    .collect(Collectors.toList());
-        }
+
 
         @Override
         public void deleteCredit(Long id) {
@@ -166,12 +155,6 @@ import java.util.stream.Collectors;
                     .collect(Collectors.toList());
         }
 
-        @Override
-        public List<CreditDTO> getCreditsByClientId(Long clientId) {
-            return creditRepository.findByClientId(clientId).stream()
-                    .map(creditMapper::toDTO)
-                    .collect(Collectors.toList());
-        }
     }
 
 

@@ -10,8 +10,6 @@ public interface GestionCreditService {
     List<ClientDTO> getAllClients();
     ClientDTO updateClient(Long id, ClientDTO dto);
     void deleteClient(Long id);
-    CreditDTO getCreditById(Long id);
-    List<CreditDTO> getAllCredits();
     void deleteCredit(Long id);
     CreditPersonnelDTO saveCreditPersonnel(CreditPersonnelDTO dto);
     CreditPersonnelDTO updateCreditPersonnel(Long id, CreditPersonnelDTO dto);
@@ -25,5 +23,5 @@ public interface GestionCreditService {
     RemboursementDTO updateRemboursement(Long id, RemboursementDTO dto);
     void deleteRemboursement(Long id);
     List<RemboursementDTO> getRemboursementsByCreditId(Long creditId);
-    List<CreditDTO> getCreditsByClientId(Long clientId);
+
 }

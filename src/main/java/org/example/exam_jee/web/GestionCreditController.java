@@ -41,25 +41,6 @@ public class GestionCreditController {
     public void deleteClient(@PathVariable Long id) {
         service.deleteClient(id);
     }
-    @GetMapping("/credits")
-    public List<CreditDTO> getAllCredits() {
-        return service.getAllCredits();
-    }
-
-    @GetMapping("/credits/{id}")
-    public CreditDTO getCreditById(@PathVariable Long id) {
-        return service.getCreditById(id);
-    }
-
-    @DeleteMapping("/credits/{id}")
-    public void deleteCredit(@PathVariable Long id) {
-        service.deleteCredit(id);
-    }
-
-    @GetMapping("/clients/{clientId}/credits")
-    public List<CreditDTO> getCreditsByClientId(@PathVariable Long clientId) {
-        return service.getCreditsByClientId(clientId);
-    }
 
     @PostMapping("/credits/personnel")
     public CreditPersonnelDTO saveCreditPersonnel(@RequestBody CreditPersonnelDTO dto) {
