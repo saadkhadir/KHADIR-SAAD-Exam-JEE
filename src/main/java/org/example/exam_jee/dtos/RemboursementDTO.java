@@ -10,6 +10,6 @@ public class RemboursementDTO {
     private Long id;
     private LocalDate date;
     private double montant;
-    private TypeRemboursement type; // Mensualité, Remboursement Anticipé
+    private TypeRemboursement type;
     private Long creditId;
 }
