@@ -1,7 +1,6 @@
 package org.example.exam_jee.entities;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,10 +18,8 @@ public abstract class Credit {
     private double montant;
     private int dureeRemboursement;
     private float tauxInteret;
-
     @ManyToOne
     private Client client;
-
     @OneToMany(mappedBy = "credit")
     private List<Remboursement> remboursements;
 }
