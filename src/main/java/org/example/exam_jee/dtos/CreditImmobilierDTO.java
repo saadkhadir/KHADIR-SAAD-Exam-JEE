@@ -1,4 +1,11 @@
 package org.example.exam_jee.dtos;
 
-public class CreditImmobilierDTO {
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.example.exam_jee.enums.TypeBien;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class CreditImmobilierDTO extends CreditDTO {
+    private TypeBien typeBien; // Appartement, Maison, Local Commercial
 }

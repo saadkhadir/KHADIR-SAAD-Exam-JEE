@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.Data;
+import org.example.exam_jee.enums.TypeBien;
 
 @Entity @Data
 @DiscriminatorValue("IMMOBILIER")

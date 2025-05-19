@@ -1,6 +1,9 @@
 package org.example.exam_jee;
 
 import org.example.exam_jee.entities.*;
+import org.example.exam_jee.enums.StatutCredit;
+import org.example.exam_jee.enums.TypeBien;
+import org.example.exam_jee.enums.TypeRemboursement;
 import org.example.exam_jee.repositories.ClientRepository;
 import org.example.exam_jee.repositories.CreditRepository;
 import org.example.exam_jee.repositories.RemboursementRepository;

@@ -1,4 +1,4 @@
-package org.example.exam_jee.entities;
+package org.example.exam_jee.enums;
 
 public enum TypeBien {
 

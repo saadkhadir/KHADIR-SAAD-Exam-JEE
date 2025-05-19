@@ -2,6 +2,7 @@ package org.example.exam_jee.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.example.exam_jee.enums.StatutCredit;
 
 import java.time.LocalDate;
 import java.util.List;
